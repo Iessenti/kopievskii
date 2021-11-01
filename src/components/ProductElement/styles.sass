@@ -1,0 +1,176 @@
+$rose: #F96D8C !global
+$yellow: #FBD862 !global
+$rose2: #F9738B !global
+    
+.product-element-wrapper 
+    height: 432px
+    width: 326px
+    border-radius: 24px
+    box-sizing: border-box
+    padding: 18px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    transition: all .6s ease-in-out
+    margin-bottom: 32px
+    cursor: pointer
+
+    &:hover
+        background-color: #FFF
+        box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12)
+    &__product-inside-wrapper
+        height: 100%
+        width: 100% 
+        position: relative
+        background-image: radial-gradient(rgba(196, 196, 196, 0.3) 10%, transparent 10%), radial-gradient(#FAFAFA 20%, transparent 20%)
+        background-size: 11.89px 11.89px
+        border-radius: 24px
+        background-image: url('../../images/Bg-card.png')
+        background-position: center
+        background-size: cover
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &__header-circles
+            background: #FFFFFF
+            border: 1px solid rgba(119, 126, 145, 0.2)
+            box-sizing: border-box
+            border-radius: 20px
+            height: 40px
+            position: absolute
+            top: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            padding: auto
+        .left-circle
+            left: 0
+            width: 62px
+        .right-circle
+            right: 0
+            width: 40px
+
+        &__button
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 100%
+            box-sizing: border-box
+            padding: 14px
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            background: #FFFFFF
+            box-shadow: 0px 14px 64px 2px rgba(31, 47, 70, 0.05)
+            border-radius: 16px
+            box-sizing: border-box
+            font-family: 'Poppins', sans-serif
+            font-weight: 500
+            &__text
+                font-size: 16px
+                line-height: 24px
+                color: #23262F
+            &__price
+                border: 2px transparent
+                border-radius: 6px
+                background-image: linear-gradient(white, white), linear-gradient(90deg, $rose 0%, $yellow 100%)
+                background-origin: border-box
+                background-clip: content-box, border-box
+                border-image-slice: 1
+                padding: 2px
+                font-size: 12px
+                line-height: 12px
+                text-transform: uppercase
+                color: $rose2
+                font-weight: 700
+                div 
+                    padding: 8px
+        .dots-wrapper
+
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            position: absolute
+            bottom: 64px
+            margin: 0
+            margin-left: -22px
+            .width-dot
+                margin-top: 4px
+            svg
+                margin: 0 2px
+        img 
+            max-height: 60%
+            width: 80%
+            object-fit: scale-down
+            margin-bottom: 30%
+        &__black-popup
+            position: absolute
+            top: -18px
+            left: -12px
+            display: flex
+            flex-direction: column
+            align-items: center
+            z-index: 700
+            div
+                font-size: 12px
+                line-height: 20px
+                font-weight: 600
+                color: #FCFCFD
+                background-color: black
+                background: #141416
+                border-radius: 8px
+                padding: 4px 0
+                text-align: center
+                width: 120px
+
+
+.gradient
+    text-align: center
+    margin: auto
+    padding: auto
+    font-family: 'Poppins', sans-serif
+    font-weight: 900
+    background: -webkit-linear-gradient($rose 0%, $yellow 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.bigger-product-card
+    height: 490px
+    width: 470px
+    box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12)
+    background: #fff
+    margin: 0
+    &:hover
+        box-shadow: 0
+    &__product-inside-wrapper
+        overflow: visible
+        display: flex
+        justify-content: center
+        align-items: center
+        img 
+            position: absolute
+            bottom: 0
+            height: 342px
+            width: 292px
+            left: calc(50% - 146px)
+            transform: scale(1.2)
+        &__bottom-text    
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 52px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-family: 'Poppins', sans-serif
+            font-weight: 500
+            font-size: 16px
+            line-height: 24px
+            color: #23262F 
+            background: #fff 

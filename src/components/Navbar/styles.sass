@@ -1,0 +1,80 @@
+$rose2: #F9738B !global
+$rose: #F96D8C !global
+$yellow: #FBD862 !global
+    
+.navbar-wrapper 
+    max-width: 1032px
+    width: 100%
+    height: 80px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    position: relative
+    border-bottom: 2px solid $rose
+    border-image: linear-gradient(90deg, $rose 0%, $yellow 100%)
+    border-image-slice: 1
+    box-shadow: 0px 64px 54px -29px rgba(31, 47, 70, 0.12)
+
+.navbar-left-side
+    display: flex
+    flex-direction: row
+    align-items: center
+    &__logo-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+    
+    &__nav
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-left: 58px
+        
+        &__nav-link
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 30px
+            font-weight: 900
+            text-decoration: none
+            cursor: pointer
+            svg
+                position: absolute
+                bottom: -2px
+        .inactive
+            color: #777E90
+        .active 
+            color: $rose2
+        
+
+.navbar-right-side 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 20px
+    padding: 12px
+    background: #F5F4F4
+    border-radius: 8px
+    cursor: pointer
+    outline: none
+    &__link-button
+        text-decoration: none
+    
+    svg 
+        margin-right: -16px
+
+.gradient-text
+    margin-left: 24px
+    font-weight: 900
+    background: -webkit-linear-gradient(90deg, $rose 0%, $yellow 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.divider
+    height: 1px
+    width: 100%
+    background: #E6E8EC
+    margin-top: 19px

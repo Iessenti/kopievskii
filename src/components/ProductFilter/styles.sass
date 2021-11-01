@@ -1,0 +1,148 @@
+.product-filter-wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    min-height: 112px
+    padding: 32px 0
+    box-sizing: border-box
+
+    &__first-row-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        
+
+        .panel-category-wrapper
+            display: flex
+            flex-direction: row
+            align-items: center
+            div
+                box-sizing: border-box
+                padding: 6px 12px
+                border-radius: 100px
+                font-family: 'DM Sans', sans-serif
+                font-weight: bold
+                font-size: 14px
+                line-height: 16px
+                margin: 0 6px
+                color: #777E91
+                cursor: pointer
+                transition: all .2s ease-in-out
+            .selected-category-panel
+                background: #353945
+                color: #FCFCFD
+        
+        .filter-button
+            padding: 16px 20px 16px 24px
+            width: 86px
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            background: #F9738B
+            border-radius: 90px
+            font-weight: bold
+            font-size: 16px
+            line-height: 16px
+            color: #FCFCFD
+            font-family: 'DM Sans', sans-serif
+            cursor: pointer
+
+
+
+
+    .divider
+        height: 1px
+        width: 100%
+        background: #E6E8EC
+        margin-top: 19px
+    
+    &__second-row-wrapper
+        margin-top: 32px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        .dropdown-wrapper
+            .dropdown-fading-wrapper
+                margin-top: 76px
+                width: 256px
+                padding: 8px
+        
+        .range-wrapper
+            height: 36px
+            // background: white
+            // div
+            //     width: 234px
+            //     height: 16px
+            //     background: #E6E8EC
+            // svg
+            //     padding: 20px
+  
+
+
+
+.dropdown-wrapper
+    display: flex
+    flex-direction: column
+    align-items: start
+    width: 234px
+    position: relative
+    font-family: 'Poppins', sans-serif
+    span
+        position: relative
+        left: 0
+        font-weight: bold
+        font-size: 12px
+        line-height: 12px
+        text-transform: uppercase
+        color: #B1B5C4
+        margin-bottom: 12px
+    &__title
+        padding: 8px 8px 8px 16px
+        border: 2px solid #E6E8EC
+        box-sizing: border-box
+        border-radius: 12px
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: center
+        
+        font-weight: 500
+        font-size: 14px
+        line-height: 24px
+        color: #23262F
+        div
+            position: absolute
+            right: 8px
+            display: flex
+            justify-content: center
+            align-items: center
+            box-sizing: border-box
+            width: 32px
+            height: 32px
+            border: 2px solid #E6E8EC
+            box-sizing: border-box
+            border-radius: 100px
+        .reversedArrow
+            transform: rotate(180deg)
+    .dropdown-fading-wrapper
+        z-index: 800
+        position: absolute
+        width: 234px
+        background: #FCFCFD
+        border: 2px solid #E6E8EC
+        box-sizing: border-box
+        box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12)
+        border-radius: 12px
+        margin-top: 52px
+        box-sizing: border-box
+        div
+            box-sizing: border-box
+            padding: 8px
+            cursor: pointer
+            transition: all .2s ease-in-out
+            border-radius: 8px
+            &:hover
+                background: #F4F5F6
