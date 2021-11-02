@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 import './styles.sass'
 
@@ -22,7 +22,7 @@ export const WalletPage = () => {
                     </div>
 
                     <div className='wallet-page-wrapper__nav-wrappern__nav-state'>
-                        <span className='wallet-page-wrapper__nav-wrapper__nav-state__grey-text'>
+                        <span className='wallet-page-wrapper__nav-wrapper__nav-state__grey-text' onClick={() => history.goBack()}>
                             Explore
                         </span>
                         <ShortArrowRightIcon/>
@@ -69,7 +69,7 @@ export const WalletPage = () => {
 
             <div className='wallet-page-wrapper__additional-data-wrapper'>
                     <div className='wallet-page-wrapper__additional-data-wrapper__title'>
-                        By unlocking Your wallet You agree to our <span>Terms of Service</span>, <span>Privacy</span> and <span>Cookie Policy.</span>
+                        By unlocking Your wallet You agree to our <Link to='/' className='link'>Terms of Service</Link>, <Link to='/' className='link'>Privacy</Link> and <Link to='/' className='link'>Cookie Policy.</Link>
                     </div>
                     <div className='wallet-page-wrapper__additional-data-wrapper__text'>
                         Disclaimer: Wallets are provided by External Providers and by selecting you agree to Terms of those Providers. Your access to the wallet might be reliant on the External Provider being operational.

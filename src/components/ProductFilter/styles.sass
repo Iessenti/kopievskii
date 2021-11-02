@@ -17,6 +17,7 @@
             display: flex
             flex-direction: row
             align-items: center
+            
             div
                 box-sizing: border-box
                 padding: 6px 12px
@@ -32,14 +33,20 @@
             .selected-category-panel
                 background: #353945
                 color: #FCFCFD
-        
+        .first-row-dropdown
+            width: 180px
+            cursor: pointer
+        .fs
+            margin-right: -25.5px
+
         .filter-button
             padding: 16px 20px 16px 24px
-            width: 86px
+            width: fit-content
             display: flex
             flex-direction: row
             align-items: center
-            justify-content: space-between
+            justify-content: center
+            box-sizing: border-box
             background: #F9738B
             border-radius: 90px
             font-weight: bold
@@ -48,6 +55,10 @@
             color: #FCFCFD
             font-family: 'DM Sans', sans-serif
             cursor: pointer
+            transition: all 2s ease-in-out
+            svg 
+                margin-top: 2px
+                margin-left: 15.33px
 
 
 
@@ -63,22 +74,41 @@
         display: flex
         flex-direction: row
         justify-content: space-between
+        align-items: center
 
         .dropdown-wrapper
+            cursor: pointer
             .dropdown-fading-wrapper
                 margin-top: 76px
                 width: 256px
                 padding: 8px
-        
+        .second-row-title
+            position: relative
+            left: 0
+            font-weight: bold
+            font-size: 12px
+            line-height: 12px
+            text-transform: uppercase
+            color: #B1B5C4
+            margin-bottom: 12px
         .range-wrapper
-            height: 36px
-            // background: white
-            // div
-            //     width: 234px
-            //     height: 16px
-            //     background: #E6E8EC
-            // svg
-            //     padding: 20px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            height: 74px
+            .prices
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: space-between
+                width: 100%
+                margin-top: 8px
+                span
+                    font-family: 'Poppins', sans-serif
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 24px
+                    color: #23262F
   
 
 
@@ -90,15 +120,6 @@
     width: 234px
     position: relative
     font-family: 'Poppins', sans-serif
-    span
-        position: relative
-        left: 0
-        font-weight: bold
-        font-size: 12px
-        line-height: 12px
-        text-transform: uppercase
-        color: #B1B5C4
-        margin-bottom: 12px
     &__title
         padding: 8px 8px 8px 16px
         border: 2px solid #E6E8EC

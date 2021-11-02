@@ -14,7 +14,7 @@ export const ProductsList = () => {
             <div className='products-list-wrapper__elements'>
             {
                 data.map( (elem, index) => (
-                    <ProductElement type='small' key={index} id={elem.id} count={elem.count} countLeft={elem.countLeft} photoUrl={elem.photoUrl} price={elem.price} desc={elem.desc} />
+                    <ProductElement type='small' key={index} index={index} id={elem.id} count={elem.count} countLeft={elem.countLeft} photoUrl={elem.photoUrl} price={elem.price} desc={elem.desc} />
                 ))
             }
             </div>

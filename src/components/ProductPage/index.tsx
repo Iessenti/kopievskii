@@ -6,7 +6,7 @@ import { BackArrowIcon , ShortArrowRightIcon, SizeRulerIcon, PolyFilledIcon } fr
 import { ProductElement } from '../ProductElement/index' 
 
 interface ProductProps {
-    key: number;
+    index: number;
     id: string;
     count: string;
     photoUrl: string;
@@ -51,7 +51,7 @@ export const ProductPage = () => {
 
                 <div className='product-page-wrapper__main-part-wrapper'>
                     <div>
-                        <ProductElement type='bigger' id={productData.id} count={productData.count} countLeft={productData.countLeft} photoUrl={productData.photoUrl} price={productData.price} desc={productData.desc}/>
+                        <ProductElement type='bigger'  index={productData.index} id={productData.id} count={productData.count} countLeft={productData.countLeft} photoUrl={productData.photoUrl} price={productData.price} desc={productData.desc}/>
                     </div>
 
                     <div className='product-page-wrapper__main-part-wrapper__text-wrapper'>

@@ -30,7 +30,7 @@ export const ProductFilter = () => {
         <div className='product-filter-wrapper'>
             
             <div className='product-filter-wrapper__first-row-wrapper'>
-                <div className='dropdown-wrapper'>
+                <div className='dropdown-wrapper first-row-dropdown'>
                     <div 
                         className='dropdown-wrapper__title' 
                         onClick={ () => toggleOpenedList('date')}
@@ -56,7 +56,7 @@ export const ProductFilter = () => {
 
                 </div>
                 
-                <div className='panel-category-wrapper'>
+                <div className={`panel-category-wrapper ${isSecondRowShowed? 'fs' : ''}`}>
                     <div
                         className={ (choosenCategory == 'all') ? 'selected-category-panel' : ''}
                         onClick={ () => setChoosenCategory('all')}
@@ -97,7 +97,7 @@ export const ProductFilter = () => {
                 ?
                 <div className='product-filter-wrapper__second-row-wrapper'>
                 <div className='dropdown-wrapper'>
-                    <span>NETWORK</span>
+                    <span className='second-row-title'>NETWORK</span>
 
                     <div 
                         className='dropdown-wrapper__title' 
@@ -124,7 +124,7 @@ export const ProductFilter = () => {
 
                 </div>
                 <div className='dropdown-wrapper'>
-                    <span>PROJECT</span>
+                    <span className='second-row-title'>PROJECT</span>
                     
                     <div 
                         className='dropdown-wrapper__title' 
@@ -151,7 +151,7 @@ export const ProductFilter = () => {
 
                 </div>
                 <div className='dropdown-wrapper'>
-                    <span>LAUNCH</span>
+                    <span className='second-row-title'>LAUNCH</span>
 
                     <div 
                         className='dropdown-wrapper__title' 
@@ -179,8 +179,9 @@ export const ProductFilter = () => {
                 </div>
 
                 <div className='range-wrapper'>
+                    <span className='second-row-title'>PRICE RANGE</span>
                     <RangeSlider />
-                    
+                    <div className='prices'><span>0.5 $</span> <span>30 000 $</span></div>
                 </div>
 
                 </div>

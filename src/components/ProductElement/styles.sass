@@ -70,6 +70,8 @@ $rose2: #F9738B !global
             box-sizing: border-box
             font-family: 'Poppins', sans-serif
             font-weight: 500
+            text-decoration: none
+            outline: none
             &__text
                 font-size: 16px
                 line-height: 24px
@@ -89,8 +91,7 @@ $rose2: #F9738B !global
                 font-weight: 700
                 div 
                     padding: 8px
-        .dots-wrapper
-
+        .small-dots-wrapper
             display: flex
             flex-direction: row
             align-items: center
@@ -98,16 +99,17 @@ $rose2: #F9738B !global
             position: absolute
             bottom: 64px
             margin: 0
-            margin-left: -22px
-            .width-dot
-                margin-top: 4px
+            left: calc(50% - 45px)
+            .long
+                margin-top: 6px
             svg
-                margin: 0 2px
-        img 
-            max-height: 60%
-            width: 80%
-            object-fit: scale-down
-            margin-bottom: 30%
+                margin: 0 4.5px
+
+        .small-img
+            height: 350px
+            width: 350px
+            object-fit: fill
+            margin-bottom: 34%
         &__black-popup
             position: absolute
             top: -18px
@@ -128,6 +130,44 @@ $rose2: #F9738B !global
                 text-align: center
                 width: 120px
 
+.left-carousel-arrow
+    position: absolute
+    left: 36px
+    bottom: 125px
+    transform: rotate(90deg)
+    width: 32px
+    height: 32px
+    background: #FFFFFF
+    box-sizing: border-box
+    border: 2px solid #E6E8EC
+    box-sizing: border-box
+    border-radius: 100px
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+.right-carousel-arrow
+    position: absolute
+    right: 36px
+    bottom: 125px
+    transform: rotate(270deg)
+    width: 32px
+    height: 32px
+    background: #FFFFFF
+    box-sizing: border-box
+    border: 2px solid #E6E8EC
+    box-sizing: border-box
+    border-radius: 100px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.end-carousel-arrow
+    background: rgba(255, 255, 255, 0.5)
+    border: none
+    width: 32px
+    height: 32px
 
 .gradient
     text-align: center
@@ -152,13 +192,15 @@ $rose2: #F9738B !global
         display: flex
         justify-content: center
         align-items: center
-        img 
+        &__image
             position: absolute
             bottom: 0
-            height: 342px
-            width: 292px
-            left: calc(50% - 146px)
-            transform: scale(1.2)
+            width: 400px
+            height: 500px
+            object-fit: cover
+            left: calc(50% - 200px)
+            margin-bottom: 7%
+            // transform: scale(1.2)
         &__bottom-text    
             position: absolute
             bottom: 0
@@ -174,3 +216,21 @@ $rose2: #F9738B !global
             line-height: 24px
             color: #23262F 
             background: #fff 
+        &__dots-wrapper 
+            width: 100%
+            background-color: white
+            left: 0
+            bottom: 52px
+            margin-left: 0px
+            padding-top: 15px
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            position: absolute
+            margin: 0
+            
+            .long
+                margin-top: 5px
+            svg
+                margin: 0 4.5px

@@ -24,7 +24,8 @@ $yellow: #FBD862 !global
         display: flex
         flex-direction: row
         align-items: center
-    
+        text-decoration: none
+        outline: none
     &__nav
         display: flex
         flex-direction: row
@@ -62,14 +63,16 @@ $yellow: #FBD862 !global
     outline: none
     &__link-button
         text-decoration: none
-    
+        display: flex
+        flex-direction: row
+        align-items: center
     svg 
         margin-right: -16px
 
 .gradient-text
     margin-left: 24px
     font-weight: 900
-    background: -webkit-linear-gradient(90deg, $rose 0%, $yellow 100%)
+    background: -webkit-linear-gradient(left, $rose 0%, $yellow 100%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
 

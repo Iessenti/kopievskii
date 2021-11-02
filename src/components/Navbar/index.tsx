@@ -9,10 +9,12 @@ export const Navbar = () => {
     return (
         <div className='navbar-wrapper'>
             <div className='navbar-left-side'>
-                <div className='navbar-left-side__logo-wrapper'>
-                    <Logo />
-                    <span className='gradient-text'>MERCHDAO</span>
-                </div>
+                
+                    <Link to='/' className='navbar-left-side__logo-wrapper'>
+                        <Logo />
+                        <span className='gradient-text'>MERCHDAO</span>
+                    </Link>
+                
 
                 <div className='navbar-left-side__nav'>
                     <Link 

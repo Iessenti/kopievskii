@@ -46,6 +46,7 @@
                 line-height: 16px
                 color: #777E91
                 margin-right: 22px
+                cursor: pointer
 
     &__main-part-wrapper
         display: flex
@@ -113,7 +114,10 @@
             font-size: 14px
             line-height: 21px
             color: #4F4F4F
-            span
+            .link
+                cursor: pointer
+                text-decoration: none
+                outline: none
                 color: #F9738B
         &__text
             margin-top: 16px
@@ -125,7 +129,7 @@
 
             
 .qr-wrapper
-    position: fixed
+    position: absolute
     right: 0
     top: 0
     box-sizing: border-box
