@@ -37,7 +37,7 @@ export const ProductPage = () => {
                     </div>
 
                     <div className='product-page-wrapper__nav-wrappern__nav-state'>
-                        <span className='product-page-wrapper__nav-wrapper__nav-state__grey-text'>
+                        <span className='product-page-wrapper__nav-wrapper__nav-state__grey-text' onClick={() => history.goBack()}>
                             Explore
                         </span>
                         <ShortArrowRightIcon/>
