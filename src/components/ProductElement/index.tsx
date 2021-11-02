@@ -102,7 +102,7 @@ export const ProductElement = ({...props}: ProductProps) => {
                     
                     <img src={photoArr[carouselState]} className={(props.type!='small') ? 'bigger-product-card__product-inside-wrapper__image' : 'small-img'}/>
                     
-                    <div 
+                    {/* <div 
                         className={`${ (carouselState==0) ? 'end-carousel-arrow' : '' } left-carousel-arrow`}
                         onClick={ () => togglePhoto('back')}
                     >
@@ -114,7 +114,7 @@ export const ProductElement = ({...props}: ProductProps) => {
                         onClick={ () => togglePhoto('forward')}
                     >
                         <DropdownArrowIcon/>
-                    </div>
+                    </div> */}
 
                     <div className={ (props.type!='small') ? 'bigger-product-card__product-inside-wrapper__dots-wrapper':'small-dots-wrapper'}>
                         {
