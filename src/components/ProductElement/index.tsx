@@ -46,7 +46,7 @@ export const ProductElement = ({...props}: ProductProps) => {
         } else {
             setCoinIcon(<EthIcon/>)
         }
-        console.log(props)
+
         if ((props.index == 0) || (props.index==3)) {
             setPhotoArr([ T1, T2 ])
             setAboutProps({...aboutProps, photoUrl: T1})

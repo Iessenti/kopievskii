@@ -9,12 +9,9 @@ export const Navbar = () => {
 
     const [ popupOpened, setPopupOpened ] = useState<boolean>(false)
 
-
-    let x: number = 0;
     window.addEventListener('click', e => {
         const target = e.target as HTMLTextAreaElement
-        e.preventDefault();
-        console.log(target.className)
+        
         if (popupOpened) {
             if  (target.className !== 'navbar-popup-wrapper')  {
                 setPopupOpened(false)
@@ -79,7 +76,7 @@ export const Navbar = () => {
 
             <div className='navbar-right-side' >
 
-                <div className='navbar-right-side__chain-icon' onClick={ () => togglePopupOpened()}>
+                <div className='navbar-right-side__chain-icon'>
                     <BnbIcon />
                 </div>
                     

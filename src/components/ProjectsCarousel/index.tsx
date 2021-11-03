@@ -55,35 +55,39 @@ interface CarouselProps {
 
 export const ProjectsCarousel = ({...props}: CarouselProps) => {
 
-    const [offset, setOffset] = useState(0)
+    const name = props.type
+    
+    const [scrollState, setScrollState] = useState<string>('left')
 
     const nextCards = () => {
-        const elem = document.querySelector('.projects-carousel-wrapper__inside-wrapper__projects-carousel') as HTMLElement
+        const elem = document.querySelector('#'+name+'carousel') as HTMLElement
         elem.scroll({
             left: 1200,
             behavior: 'smooth'
         })
+        setScrollState('right')
     }
 
     const prevCards = () => {
-        const elem = document.querySelector('.projects-carousel-wrapper__inside-wrapper__projects-carousel') as HTMLElement
+        const elem = document.querySelector('#'+name+'carousel') as HTMLElement
         elem.scroll({
             left: -1200,
             behavior: 'smooth'
         })
+        setScrollState('left')
     }
 
     return (
         <div className='projects-carousel-wrapper'>
             <div className='projects-carousel-wrapper__title'>
-                <span className='small-title'>{props.type}</span>
+                <span className='small-title'>{name}</span>
                 <span className='bigger-title'>Projects</span>
             </div>
 
             <div className='projects-carousel-wrapper__inside-wrapper'>
                 <div 
                     className='projects-carousel-wrapper__inside-wrapper__projects-carousel'
-                    style={{marginLeft: `-${offset}px`}}
+                    id={name+ 'carousel'}
                 >
                 {
                     data.map( (e, index) => (
@@ -121,11 +125,11 @@ export const ProjectsCarousel = ({...props}: CarouselProps) => {
                 }
                 </div>
                 <div className='projects-carousel-wrapper__inside-wrapper__arrows-wrapper'>
-                    <div onClick={ () => prevCards()}>
+                    <div onClick={ () => prevCards()} className={(scrollState == 'left') ? 'disabledArrow' : '' }>
                         <BackArrowIcon/>
                     </div>
 
-                    <div className='reversed' onClick={() => nextCards()}>
+                    <div onClick={() => nextCards()} className={(scrollState == 'right') ? 'disabledArrow reversed' : 'reversed' }>
                         <BackArrowIcon/>
                     </div>
                 </div>
