@@ -55,19 +55,81 @@ $yellow: #FBD862 !global
     flex-direction: row
     justify-content: space-between
     align-items: center
-    height: 20px
-    padding: 12px
-    background: #F5F4F4
-    border-radius: 8px
-    cursor: pointer
-    outline: none
+
     &__link-button
         text-decoration: none
         display: flex
         flex-direction: row
         align-items: center
-    svg 
-        margin-right: -16px
+        height: 20px
+        padding: 12px
+        background: #F5F4F4
+        border-radius: 8px
+        cursor: pointer
+        outline: none
+        svg 
+            margin-right: -16px
+    &__chain-icon
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 44px
+        width: 53px
+        margin-right: 12px
+        background: #FFFFFF
+        border: 2px solid #F5F4F4
+        box-sizing: border-box
+        border-radius: 8px
+        cursor: pointer
+        z-index: 700
+        svg
+            z-index: 2
+            
+
+.navbar-popup-wrapper
+    width: 256px
+    height: 156px
+    z-index: 900
+    position: absolute
+    top: 89px
+    right: 198px
+    background: #FCFCFD
+    border: 2px solid #E6E8EC
+    box-sizing: border-box
+    padding: 8px
+    box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12)
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    &__link
+        width: 100%
+        padding: 10px
+        box-sizing: border-box
+        display: flex
+        flex-direction: row
+        align-items: center  
+        position: relative  
+        border-radius: 8px
+        font-family: 'Poppins', sans-serif
+        font-weight: 500
+        font-size: 14px
+        line-height: 24px
+        color: #23262F
+        transition: all .4s ease-in-out
+        cursor: pointer
+        text-decoration: none
+        outline: none
+        span
+            position: absolute
+            left: 40px
+        svg
+            margin-right: 10px
+        &:hover
+            background: #F4F5F6
+            
+
 
 .gradient-text
     margin-left: 24px

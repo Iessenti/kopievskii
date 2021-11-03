@@ -15,6 +15,9 @@ import { ProductPage } from './components/ProductPage/index'
 import { WalletPage } from './components/WalletPage/index'
 import { SizesModal } from './components/SizesModal/index'
 import { CheckoutModal } from './components/CheckoutModal/index'
+import { ProjectsCarousel } from './components/ProjectsCarousel/index'
+import { MainLanding } from './components/MainLanding/index'
+import { MainPageBanner } from './components/MainPageBanner/index'
 
 import './styles.sass'
 
@@ -65,6 +68,12 @@ function App() {
             >
               <ProductFilter />
               <ProductsList />
+              <Footer/>
+            </Route>
+
+            <Route
+              path='/collections'
+            >
               <Footer />
             </Route>
 
@@ -79,6 +88,16 @@ function App() {
               path="/connect-wallet" exact
             >           
               <WalletPage/>
+            </Route>
+
+            <Route 
+              path='/'
+            >
+              <MainLanding />
+              <ProjectsCarousel type='Upcoming'/>
+              <MainPageBanner/>
+              <ProjectsCarousel type='Ended'/>
+              <Footer/>
             </Route>
 
           </Switch>

@@ -1,10 +1,32 @@
+import React, { useEffect, useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import './styles.sass'
-import { Logo, Rocket, RoseNavBarHill } from '../../icons'
+import { Logo, Rocket, RoseNavBarHill, PolyIcon, BnbIcon, EthIcon } from '../../icons'
 
 export const Navbar = () => {
+
+    const [ popupOpened, setPopupOpened ] = useState<boolean>(false)
+
+
+    let x: number = 0;
+    window.addEventListener('click', e => {
+        const target = e.target as HTMLTextAreaElement
+        e.preventDefault();
+        console.log(target.className)
+        if (popupOpened) {
+            if  (target.className !== 'navbar-popup-wrapper')  {
+                setPopupOpened(false)
+            }
+        } else {
+            if ( (target.getAttribute("class") === 'navbar-right-side__chain-icon__svg') || (target.className === 'navbar-right-side__chain-icon') ){
+                setPopupOpened(true)
+            }
+        }
+
+    })
+
 
     return (
         <div className='navbar-wrapper'>
@@ -56,11 +78,31 @@ export const Navbar = () => {
             </div>
 
             <div className='navbar-right-side' >
+
+                <div className='navbar-right-side__chain-icon' onClick={ () => togglePopupOpened()}>
+                    <BnbIcon />
+                </div>
+                    
                 <Link to='/connect-wallet' className='navbar-right-side__link-button'>
                     <Rocket />
                     <span className='gradient-text'>CONNECT WALLET</span>
                 </Link> 
             </div>
+
+            {
+                popupOpened
+                ?
+                <div className='navbar-popup-wrapper' 
+                //style={{left: document.querySelector('.navbar-right-side__chain-icon').getBoundingClientRect().right - 508 + 'px'}}
+                >
+                    <Link to='/' className='navbar-popup-wrapper__link'><PolyIcon/><span>Smart Chain</span></Link>
+                    <Link to='/' className='navbar-popup-wrapper__link'><EthIcon/><span>Etherium</span></Link>
+                    <Link to='/' className='navbar-popup-wrapper__link'><BnbIcon/><span>Polygon</span></Link>
+                </div>
+                :
+                <></>
+            }
+
         </div>
     )
 }
