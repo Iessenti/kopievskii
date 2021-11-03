@@ -1,6 +1,7 @@
 import './styles.sass'
 
 import MerchdaoCali from '../../images/MerchdaoCali.png'
+import MainLandingImage from '../../images/MainLanding.png'
 
 export const MainLanding = () => {
 
@@ -18,6 +19,10 @@ export const MainLanding = () => {
                     <div className='main-landing-wrapper__text-part__buttons-wrapper__rose'>Show me trendings</div>
                     <div className='main-landing-wrapper__text-part__buttons-wrapper__blue'>Discover more</div>
                 </div>
+            </div>
+
+            <div className='main-landing-wrapper__image'>
+                <img src={MainLandingImage} />
             </div>
 
         </div>
